@@ -20,8 +20,10 @@ class PostController extends Controller
 
         $data = (string) $request->getBody();
         $posts = json_decode($data, true);
-
-        
+        //dd('abc');
+        //dd($posts);
+        return view("fe.index",compact("posts"));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
